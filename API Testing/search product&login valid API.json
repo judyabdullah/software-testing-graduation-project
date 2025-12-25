@@ -1,0 +1,306 @@
+{
+	"info": {
+		"_postman_id": "ac2f1c70-ed0e-454d-b09e-d1b17439e8d9",
+		"name": "My Collection",
+		"description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "50590771",
+		"_collection_link": "https://jojow8176-7869174.postman.co/workspace/591ba607-8f52-4965-81fb-f3aad5810596/collection/50590771-ac2f1c70-ed0e-454d-b09e-d1b17439e8d9?action=share&source=collection_link&creator=50590771"
+	},
+	"item": [
+		{
+			"name": "Get data",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				},
+				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+			},
+			"response": []
+		},
+		{
+			"name": "Post data",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response code is 200 inside body\", function () {",
+							"    var json = pm.response.json();",
+							"    pm.expect(json.responseCode).to.eql(200);",
+							"});",
+							"",
+							"pm.test(\"Message is 'User exists!'\", function () {",
+							"    var json = pm.response.json();",
+							"    pm.expect(json.message).to.eql(\"User exists!\");",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "jojoW8176@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Judy25303&",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "judy",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://automationexercise.com/api/verifyLogin\n",
+					"protocol": "https",
+					"host": [
+						"automationexercise",
+						"com"
+					],
+					"path": [
+						"api",
+						"verifyLogin\n"
+					]
+				},
+				"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+			},
+			"response": []
+		},
+		{
+			"name": "login API",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response code is 200 inside body\", function () {",
+							"    var json = pm.response.json();",
+							"    pm.expect(json.responseCode).to.eql(200);",
+							"});",
+							"",
+							"pm.test(\"Message is 'User exists!'\", function () {",
+							"    var json = pm.response.json();",
+							"    pm.expect(json.message).to.eql(\"User exists!\");",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "jojoW8176@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Judy25303&",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "judy",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://automationexercise.com/api/verifyLogin\n",
+					"protocol": "https",
+					"host": [
+						"automationexercise",
+						"com"
+					],
+					"path": [
+						"api",
+						"verifyLogin\n"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login API",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response code is 200 inside body\", function () {",
+							"    var json = pm.response.json();",
+							"    pm.expect(json.responseCode).to.eql(200);",
+							"});",
+							"",
+							"pm.test(\"Message is 'User exists!'\", function () {",
+							"    var json = pm.response.json();",
+							"    pm.expect(json.message).to.eql(\"User exists!\");",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "jojoW8176@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Judy25303&",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "judy",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://automationexercise.com/api/verifyLogin\n",
+					"protocol": "https",
+					"host": [
+						"automationexercise",
+						"com"
+					],
+					"path": [
+						"api",
+						"verifyLogin\n"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search_product API",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Check status code\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"// Validate API response code inside JSON\r",
+							"pm.test(\"Response code is 200 inside body\", function () {\r",
+							"    var json = pm.response.json();\r",
+							"    pm.expect(json.responseCode).to.eql(200);\r",
+							"});\r",
+							"\r",
+							"// Check that products list is returned\r",
+							"pm.test(\"Products list is returned\", function () {\r",
+							"    var json = pm.response.json();\r",
+							"    pm.expect(json.products.length).to.be.above(0);\r",
+							"});\r",
+							"\r",
+							"// Validate product structure\r",
+							"pm.test(\"First product has required fields\", function () {\r",
+							"    var json = pm.response.json();\r",
+							"    \r",
+							"    pm.expect(json.products[0]).to.have.property(\"id\");\r",
+							"    pm.expect(json.products[0]).to.have.property(\"name\");\r",
+							"    pm.expect(json.products[0]).to.have.property(\"price\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "search_product",
+							"value": "dress",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://automationexercise.com/api/searchProduct",
+					"protocol": "https",
+					"host": [
+						"automationexercise",
+						"com"
+					],
+					"path": [
+						"api",
+						"searchProduct"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
